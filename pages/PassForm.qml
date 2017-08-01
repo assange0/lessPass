@@ -1,9 +1,3 @@
-/**
-* @brief 文本框界面
-* @author Roger Aries
-* @date 2017/08/01
-*/
-
 import QtQuick 2.7
 import QtQuick.Controls 2.2
 import QtQuick.Controls.Material 2.2
