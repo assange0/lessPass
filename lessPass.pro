@@ -38,5 +38,5 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-RC_ICONS = images/Lock.ico
-
+win32:RC_ICONS = images/Lock.ico
+macx:ICON = image/Lock_Earth.icns
