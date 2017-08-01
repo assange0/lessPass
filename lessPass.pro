@@ -1,5 +1,9 @@
 QT += qml quick
 
+linux {
+    QT += quickcontrols2
+}
+
 CONFIG += c++11
 
 HEADERS += \
