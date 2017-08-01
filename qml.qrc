@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qtquickcontrols2.conf</file>
+        <file>pages/CreatePass.qml</file>
+        <file>pages/LessPass.qml</file>
+        <file>pages/PassForm.qml</file>
+    </qresource>
+</RCC>
