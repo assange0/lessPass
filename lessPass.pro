@@ -39,4 +39,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 win32: RC_ICONS = images/Lock_Earth.ico
-macx: ICON = image/Lock_Earth.icns
+macx: ICON = images/Lock_Earth.icns
