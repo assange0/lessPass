@@ -79,6 +79,7 @@ ApplicationWindow {
             height: 60
             wrapMode: Label.Wrap
             horizontalAlignment: Qt.AlignHCenter
+            verticalAlignment: Qt.AlignVCenter
             background: Rectangle {
                 color: "black"
             }
@@ -86,13 +87,11 @@ ApplicationWindow {
                 id: fonts
                 source: "qrc:/font/MFYueHei_Noncommercial-Regular.ttf"
             }
-            Text {
-                text: "密码生成器"
-                anchors.centerIn: parent
-                font.family: fonts.name
-                font.pixelSize: 36
-                color: "papayawhip"
-            }
+
+            text: "密码生成器"
+            font.family: fonts.name
+            font.pixelSize: 36
+            color: "papayawhip"
         }
 
         // 自定义退出按钮
