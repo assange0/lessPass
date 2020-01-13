@@ -59,8 +59,11 @@ Rectangle {
         anchors.verticalCenter: parent.verticalCenter
         anchors.right: parent.right
         highlighted: true
-        Material.accent: Material.Red
-        opacity: 0.7
+        background: Image {
+            source: "qrc:/images/Eye_01.png"
+        }
+        // Material.accent: Material.Red
+        // opacity: 0.7
 
         onPressed: {
             passForm.btnPressed()

@@ -7,5 +7,6 @@
         <file>images/shutdown.png</file>
         <file>images/mini.png</file>
         <file>images/Key.ico</file>
+        <file>images/Eye_01.png</file>
     </qresource>
 </RCC>
