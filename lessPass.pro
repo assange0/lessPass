@@ -38,5 +38,5 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-win32: RC_ICONS = images/Cloud-Private-WF.ico
-macx: ICON = images/Cloud-Private-WF.icns
+win32: RC_ICONS = images/Key.ico
+# macx: ICON = images/Cloud-Private-WF.icns
