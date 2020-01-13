@@ -4,7 +4,7 @@
         <file>images/LockC.png</file>
         <file>images/Sign-Up-01C.png</file>
         <file>images/bgs.png</file>
-        <file>images/quitIcon.png</file>
-        <file>images/minus.png</file>
+        <file>images/shutdown.png</file>
+        <file>images/mini.png</file>
     </qresource>
 </RCC>
