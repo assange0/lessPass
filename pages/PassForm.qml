@@ -60,10 +60,9 @@ Rectangle {
         anchors.right: parent.right
         highlighted: true
         background: Image {
-            source: "qrc:/images/Eye_01.png"
+            id: btnBg
+            source: btn.pressed ? "qrc:/images/Eye_01.png" : "qrc:/images/Hide.png"
         }
-        // Material.accent: Material.Red
-        // opacity: 0.7
 
         onPressed: {
             passForm.btnPressed()

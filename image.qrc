@@ -8,5 +8,6 @@
         <file>images/mini.png</file>
         <file>images/Key.ico</file>
         <file>images/Eye_01.png</file>
+        <file>images/Hide.png</file>
     </qresource>
 </RCC>
