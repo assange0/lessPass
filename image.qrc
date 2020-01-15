@@ -9,5 +9,6 @@
         <file>images/Key.ico</file>
         <file>images/Eye_01.png</file>
         <file>images/Hide.png</file>
+        <file>images/Key.icns</file>
     </qresource>
 </RCC>
