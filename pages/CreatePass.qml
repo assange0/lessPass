@@ -72,7 +72,16 @@ Page {
             word: "最终密码..."
             read: true
             pass: genPass.lessPass
-
+            btnBg: Image {
+                id: btnImg
+                source: "qrc:/images/copy_01.png"
+            }
+            onBtnPressed: {
+                btnImg.source = "qrc:/images/copy_02.png"
+            }
+            onBtnReleased: {
+                btnImg.source = "qrc:/images/copy_01.png"
+            }
             onBtnClicked: {
                 formArea.selectAll()
                 formArea.copy()

@@ -10,5 +10,7 @@
         <file>images/Eye_01.png</file>
         <file>images/Hide.png</file>
         <file>images/Key.icns</file>
+        <file>images/copy_01.png</file>
+        <file>images/copy_02.png</file>
     </qresource>
 </RCC>

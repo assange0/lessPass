@@ -19,6 +19,7 @@ Rectangle {
     property alias read: formInfo.readOnly
     property alias length: formInfo.maximumLength
     property alias formArea: formInfo
+    property alias btnBg: btn.background
 
     signal textChanged
     signal btnPressed
@@ -60,7 +61,6 @@ Rectangle {
         anchors.right: parent.right
         highlighted: true
         background: Image {
-            id: btnBg
             source: btn.pressed ? "qrc:/images/Eye_01.png" : "qrc:/images/Hide.png"
         }
 
