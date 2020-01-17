@@ -7,11 +7,11 @@
 #ifndef GENPASS_H
 #define GENPASS_H
 
-#include <QObject>
-#include <QString>
 #include <QByteArray>
 #include <QCryptographicHash>
 #include <QMessageAuthenticationCode>
+#include <QObject>
+#include <QString>
 
 class GenPass : public QObject
 {

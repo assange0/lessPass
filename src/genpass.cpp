@@ -1,9 +1,8 @@
 #include "genpass.h"
 
-GenPass::GenPass(QObject *parent) :
-    QObject(parent)
-{
-}
+GenPass::GenPass(QObject *parent)
+    : QObject(parent)
+{}
 
 QString GenPass::getEasy() const
 {
@@ -22,8 +21,7 @@ QString GenPass::getLess() const
 
 void GenPass::setEasy(const QString &easyPass)
 {
-    if (easyPass == m_easyPass)
-    {
+    if (easyPass == m_easyPass) {
         return;
     }
 
@@ -33,8 +31,7 @@ void GenPass::setEasy(const QString &easyPass)
 
 void GenPass::setSalt(const QString &saltPass)
 {
-    if (saltPass == m_saltPass)
-    {
+    if (saltPass == m_saltPass) {
         return;
     }
 
@@ -54,12 +51,15 @@ void GenPass::genLess()
 
     // 2. 对第一步生成的md5值与saltPass做hmac256处理
     saltByte.append(m_saltPass);
-    lessByte = QMessageAuthenticationCode::hash(easyMd5, saltByte, QCryptographicHash::Sha256).toHex();
+    lessByte = QMessageAuthenticationCode::hash(easyMd5, saltByte, QCryptographicHash::Sha256)
+                   .toHex();
 
     // 3. 再次md5后，取其base64编码的前16位
-    lessByte = QCryptographicHash::hash(lessByte, QCryptographicHash::Md5).toBase64(QByteArray::Base64UrlEncoding);
-    m_lessPass = QString(lessByte).mid(0, 16).replace(QRegExp("\\-"), "_");
+    const int lower = 0;
+    const int higher = 16;
+    lessByte = QCryptographicHash::hash(lessByte, QCryptographicHash::Md5)
+                   .toBase64(QByteArray::Base64UrlEncoding);
+    m_lessPass = QString(lessByte).mid(lower, higher).replace(QRegExp("\\-"), "_");
 
     emit lessPassChanged();
 }
-
