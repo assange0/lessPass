@@ -1,10 +1,6 @@
-QT += qml quick
+QT += quick
 
-linux {
-    QT += quickcontrols2
-}
-
-CONFIG += c++11
+CONFIG += c++11 qtquickcompiler
 
 HEADERS += \
     src/genpass.h

@@ -7,10 +7,6 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 
-#ifdef Q_OS_LINUX
-#include <QQuickStyle>
-#endif
-
 #include "genpass.h"
 
 int main(int argc, char *argv[])
@@ -18,18 +14,20 @@ int main(int argc, char *argv[])
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QGuiApplication app(argc, argv);
 
-#ifdef Q_OS_LINUX
-    QQuickStyle::setStyle("Material");
-#endif
-
     qmlRegisterType<GenPass>("io.qt.genpass", 1, 0, "GenPass");
 
     QQmlApplicationEngine engine;
-    engine.load(QUrl(QLatin1String("qrc:/pages/LessPass.qml")));
-    if (engine.rootObjects().isEmpty())
-    {
-        return -1;
-    }
+    const QUrl url(QStringLiteral("qrc:/pages/LessPass.qml"));
+    QObject::connect(
+        &engine,
+        &QQmlApplicationEngine::objectCreated,
+        &app,
+        [url](QObject *obj, const QUrl &objUrl) {
+            if (!obj && url == objUrl)
+                QCoreApplication::exit(-1);
+        },
+        Qt::QueuedConnection);
+    engine.load(url);
 
     return app.exec();
 }
